@@ -7,7 +7,7 @@ const switchBtnTwo = document.querySelector("[data-switchTwo]");
 const nonClient = document.querySelector("[data-nonclient]");
 const client = document.querySelector("[data-client]");
 const trackers = document.querySelectorAll("[data-item]");
-const loginBtn = document.querySelector("[data-name='login'");
+const loginBtn = document.querySelector("[data-name='login']");
 const form = document.querySelector(".login__section form");
 
 let indexOfTracker;
@@ -112,17 +112,17 @@ const callbackToScrollImagesUp = (entries) => {
       }
       indexOfTracker--;
       trackers && trackers[indexOfTracker]?.classList.add("active");
-      console.log(indexOfTracker);
+      //   console.log(indexOfTracker);
     }, intervals);
   }
 };
 
-const observerToClearInterval = new IntersectionObserver(
+const scrollUpObserver = new IntersectionObserver(
   callbackToScrollImagesUp,
   options
 );
 
 const indexOfLastImageContainerChild = imageContainer.children.length - 1;
-observerToClearInterval.observe(
+scrollUpObserver.observe(
   imageContainer.children[indexOfLastImageContainerChild]
 );
