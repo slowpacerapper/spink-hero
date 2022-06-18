@@ -338,11 +338,22 @@ nav {
   .wrapper.rotate{
       transform: translateX(-30%) translateZ(300px) rotateY(45deg);
   }
+  .images p {
+    max-width: 80%;
+
+  }
+
   
 }
 @media (max-width:600px){
   .wrapper.rotate{
       transform: translateX(-30%) translateZ(300px) rotateY(65deg);
+  }
+
+  .images h1 {
+    max-width: 75%;
+    line-height: 1.2;
+    text-align: center;
   }
 }
 
