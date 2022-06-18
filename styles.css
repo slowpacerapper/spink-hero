@@ -330,3 +330,32 @@ nav {
   width: max-content;
   margin-left: auto;
 }
+
+
+
+/* Media Queries */
+@media (max-width:900px) {
+  .wrapper.rotate{
+      transform: translateX(-30%) translateZ(300px) rotateY(45deg);
+  }
+  
+}
+@media (max-width:600px){
+  .wrapper.rotate{
+      transform: translateX(-30%) translateZ(300px) rotateY(65deg);
+  }
+}
+
+@media (max-width:480px) {
+  .wrapper.rotate{
+      transform: translateX(-30%) translateZ(300px) rotateY(90deg);
+  }
+
+  .login__section {
+      justify-content: center;
+    }
+  .cancel{
+      top: 5%;
+      right: 0;
+  }  
+}
