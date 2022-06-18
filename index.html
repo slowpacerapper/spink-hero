@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hero Section T4C</title>
+
+    <!-- Box icons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Styles sheet -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Script -->
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <!-- Some of the comments here are redundant as 
+        the classes are implicit of what they are 
+        but for the sake of visualization, i put the comments there (<>) -->
+
+    <!-- This is the wrapper for the entire page apart from the authentication page -->
+    <div data-wrap="wrapper" class="wrapper">
+      <!-- This is the container that wraps the hero section and the navbar -->
+      <div class="nav__hero--container">
+        <!-- This is the navbar -->
+        <nav>
+          <div class="nav__items container">
+            <div class="logo">Spink</div>
+            <div class="nav__links">
+              <a href="#enterprise">Enterprise</a>
+              <button data-name="login">
+                <i class="bx bx-user"></i> Login
+              </button>
+            </div>
+          </div>
+        </nav>
+        <!-- This is the hero section -->
+        <div class="hero__section">
+          <div class="hero">
+            <!-- This div wraps all of the transiting images -->
+            <div data-container="imageContainer" class="images__container">
+              <!-- This is image one -->
+              <div class="image__one images">
+                <!-- This is the header -->
+                <h1>This is your header One</h1>
+                <!-- This is the paragraph -->
+                <p class="hero__paragraph">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Soluta, numquam natus voluptatum ea ullam nam possimus iure
+                  dignissimos dolor asperiores?
+                </p>
+                <!-- This is the link -->
+                <a class="hero__link" href="#link">Explore</a>
+              </div>
+              <!-- This is image two -->
+              <div class="image__two images">
+                <h1>This is your header Two</h1>
+                <p class="hero__paragraph">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Soluta, numquam natus voluptatum ea ullam nam possimus iure
+                  dignissimos dolor asperiores?
+                </p>
+                <a class="hero__link" href="#link">Explore</a>
+              </div>
+              <!-- This is image three -->
+              <div class="image__three images">
+                <h1>This is your header Three</h1>
+                <p class="hero__paragraph">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Soluta, numquam natus voluptatum ea ullam nam possimus iure
+                  dignissimos dolor asperiores?
+                </p>
+                <a class="hero__link" href="#link">Explore</a>
+              </div>
+              <!-- This is image four -->
+              <div class="image__four images">
+                <h1>This is your header Four</h1>
+                <p class="hero__paragraph">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Soluta, numquam natus voluptatum ea ullam nam possimus iure
+                  dignissimos dolor asperiores?
+                </p>
+                <a class="hero__link" href="#link">Explore</a>
+              </div>
+            </div>
+            <div class="scroll__item--tracker">
+              <span class="trackers active" data-item="0"></span>
+              <span class="trackers" data-item="1"></span>
+              <span class="trackers" data-item="2"></span>
+              <span class="trackers" data-item="3"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- The login wrapper  -->
+    </div>
+    <div class="login__wrapper">
+      <div class="login__section container">
+        <div data-cancel class="cancel"><i class="bx bx-x"></i></div>
+        <form>
+          <div class="form__switcher">
+            <button class="current-btn" data-switchOne="client">
+              <i class="bx bx-user"></i> Client
+            </button>
+            <button data-switchTwo="non-client">
+              <i class="bx bx-user"></i> Non Client
+            </button>
+          </div>
+
+          <div class="form__box">
+            <div data-client="client" class="client__box">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                value=""
+                placeholder="Email Address"
+              />
+              <input
+                type="password"
+                name="password"
+                id="password"
+                value=""
+                placeholder="Password"
+              />
+            </div>
+
+            <div data-nonclient="non-client" class="non__client--box hide">
+              <input
+                type="text"
+                name="rfname"
+                id="rfname"
+                placeholder="First Name"
+              />
+              <input
+                type="text"
+                name="rlname"
+                id="rlname"
+                placeholder="Last Name"
+              />
+              <input
+                type="email"
+                name="remail"
+                id="remail"
+                value=""
+                placeholder="Email Address"
+              />
+              <input
+                type="password"
+                name="rpassword"
+                id="rpassword"
+                value=""
+                placeholder="Password"
+              />
+            </div>
+          </div>
+          <button type="submit">Login</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

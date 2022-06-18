@@ -1,0 +1,332 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --color-one: rgb(153, 152, 152);
+  --color-two: rgb(77, 233, 181);
+  --color-three: rgb(2, 42, 108);
+  --color-four: rgb(206, 205, 205);
+  --color-five: rgb(231, 230, 230);
+  --radius: 7px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+}
+
+button {
+  border: none;
+  padding: 10px 25px;
+  font-size: 16px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+body {
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  width: 100vw;
+  min-height: 100vh;
+  perspective: 800px;
+}
+
+body.sizing {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  margin-inline: auto;
+  width: 90%;
+}
+
+.wrapper,
+.login__wrapper {
+  max-width: 1920px;
+  margin-inline: auto;
+}
+
+.wrapper {
+  position: relative;
+  transition: all 0.6s ease-in-out;
+  transform-style: preserve-3d;
+}
+
+.wrapper.rotate {
+  transform-origin: left;
+  transform: translateX(-30%) translateZ(300px) rotateY(25deg);
+  overflow: hidden;
+  cursor: pointer;
+  pointer-events: none;
+}
+
+.nav__hero--container {
+  width: 100%;
+  height: 100vh;
+}
+
+.hero {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+nav {
+  position: fixed;
+  max-width: 1920px;
+  width: 100%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 90;
+}
+
+.nav__items {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 0;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--color-two);
+}
+
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav__links a,
+.nav__links button {
+  color: var(--color-four);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav__links a:hover,
+.nav__links button:hover {
+  color: var(--color-two);
+}
+
+.images__container {
+  display: grid;
+  grid-auto-flow: row;
+  height: 100vh;
+  overflow-y: hidden;
+  scroll-snap-type: y mandatory;
+  overscroll-behavior-y: contain;
+}
+
+.images {
+  height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  scroll-snap-align: start;
+}
+
+.image__one {
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("/full-seamless-spherical-cube-panorama-degrees-angle-view-shore-width-river-neman-sunny-summer-evening-sunset-143113801.jpeg");
+}
+
+.image__two {
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("/parallax_bridge1.jpeg");
+}
+
+.image__three {
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("/slider.jpeg");
+}
+
+.image__four {
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("/wine-1600.jpeg");
+}
+
+.images h1 {
+  color: var(--color-two);
+}
+
+.images p {
+  max-width: 40%;
+  text-align: center;
+  color: var(--color-five);
+}
+
+.images a {
+  padding: 10px 25px;
+  border-radius: var(--radius);
+  background-color: var(--color-two);
+  color: var(--color-three);
+  transition: all 0.4s ease-in-out;
+}
+
+.images a:hover {
+  padding: 10px 30px;
+}
+
+.scroll__item--tracker {
+  position: absolute;
+  padding: 10px 5px;
+  display: flex;
+  flex-flow: column;
+  gap: 15px;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.trackers {
+  background-color: rgba(255, 255, 255, 0.3);
+  height: 10px;
+  width: 10px;
+  cursor: pointer;
+}
+
+.trackers.active {
+  background-color: var(--color-five);
+}
+
+.login__wrapper {
+  position: fixed !important;
+  top: 0;
+  z-index: -1;
+  height: 100vh;
+  width: 100%;
+  max-width: 1920px;
+  overflow: hidden;
+}
+
+.login__section {
+  position: relative;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: end;
+  color: black;
+  /* border: 3px solid black; */
+}
+
+.cancel {
+  position: absolute;
+  top: 10%;
+  font-size: 48px;
+  font-weight: 300;
+  color: var(--color-one);
+  cursor: pointer;
+}
+
+.login__section form {
+  display: flex;
+  flex-flow: column;
+  gap: 1.5rem;
+  width: 300px;
+  height: max-content;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.show {
+  opacity: 1 !important;
+}
+
+.client__box,
+.non__client--box {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  flex-flow: column;
+  gap: 2rem;
+}
+
+.form__box {
+  position: relative;
+  min-height: 350px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  /* width: 100% !important; */
+}
+
+.hide {
+  display: none !important;
+}
+
+.form__switcher {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.form__switcher button {
+  background-color: transparent !important;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  color: var(--color-one);
+}
+
+.current-btn {
+  border-bottom: 3px solid var(--color-two);
+  border-radius: 0 !important;
+}
+
+.form__switcher button:hover {
+  color: var(--color-two);
+}
+
+.login__section form input {
+  height: 3rem;
+  width: 100%;
+  padding-inline: 1.5rem;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid grey;
+  outline: none;
+  font-size: 16px;
+  color: grey;
+}
+
+.login__section form button {
+  background-color: var(--color-two);
+  border-radius: var(--radius);
+  width: max-content;
+  margin-left: auto;
+}
