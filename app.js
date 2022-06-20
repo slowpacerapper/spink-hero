@@ -11,7 +11,7 @@ const loginBtn = document.querySelector("[data-name='login']");
 const form = document.querySelector(".login__section form");
 
 let indexOfTracker;
-const intervals = 7000;
+let intervals = 7000;
 
 if (switchBtnOne)
   switchBtnOne.onclick = (e) => {
